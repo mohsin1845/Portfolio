@@ -7,7 +7,7 @@ export async function POST(request: Request) {
     const { name, email, projectType, message } = await request.json();
 
     const data = await resend.emails.send({
-      from: "AKSHAT Photography <onboarding@resend.dev>",
+      from: "Mohsin Photography <onboarding@resend.dev>",
       to: process.env.NOTIFICATION_EMAIL || "mohsinmohiuddin85@gmail.com",
       subject: `New Inquiry: ${projectType || "Contact"} - ${name}`,
       html: `
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
         <body>
           <div class="container">
             <div class="header">
-              <div class="logo">AKSHAT</div>
+              <div class="logo">MOHSIN</div>
             </div>
             <div class="content">
               <div class="label">New Inquiry Received</div>
